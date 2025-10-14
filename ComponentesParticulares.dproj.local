@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/10/10 00:28:51.000.197,=rtl.dcp</Transaction>
+    <Transaction>2025/10/10 00:29:17.000.203,=C:\Users\Lucas\Documents\Repos\Prova_Delphi_ViaCep\Classes\ucpConsultaViaCep.pas</Transaction>
+    <Transaction>2025/10/10 00:30:19.000.173,C:\Users\Lucas\Documents\Repos\Prova_Delphi_ViaCep\ComponentesParticulares.dproj=C:\Users\Lucas\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2025/10/10 00:30:31.000.267,=xmlrtl.dcp</Transaction>
+    <Transaction>2025/10/12 10:49:21.000.471,=C:\Users\Lucas\Documents\Repos\Prova_Delphi_ViaCep\Unit1.pas</Transaction>
+    <Transaction>2025/10/12 10:50:27.000.644,C:\Users\Lucas\Documents\Repos\Prova_Delphi_ViaCep\Classes\ucpComboBoxValue.pas=C:\Users\Lucas\Documents\Repos\Prova_Delphi_ViaCep\Unit1.pas</Transaction>
+    <Transaction>2025/10/12 11:01:22.000.746,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
