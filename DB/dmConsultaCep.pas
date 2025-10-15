@@ -122,8 +122,6 @@ begin
 end;
 
 procedure TdmdConsultaCEP.DataModuleCreate(Sender: TObject);
-var
-  End1, End2, End3: TtblEndereco;
 begin
   InicializarBase;
 end;

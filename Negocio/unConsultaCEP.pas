@@ -3,7 +3,7 @@ unit unConsultaCEP;
 interface
 
 uses ucpConsultaViaCep, SysUtils, dmConsultaCep, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  Vcl.Controls;
+  Vcl.Controls, Data.DB;
 
 type
 

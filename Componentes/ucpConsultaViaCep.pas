@@ -3,7 +3,8 @@ unit ucpConsultaViaCep;
 interface
 
 uses
-  System.SysUtils, System.Classes, System.net.HttpClient, System.JSON, Xml.XMLDoc, Xml.XMLIntf;
+  System.SysUtils, System.Classes, System.net.HttpClient, System.JSON, Xml.XMLDoc, Xml.XMLIntf,
+  System.Generics.Collections;
 
 const
    PARAM_FCXML = 'xml';
