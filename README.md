@@ -90,10 +90,45 @@ para que os resultados das consultas ao WS ViaCEP possam ser armazenados e consu
 ---
 
 ## Arquitetura da solução
-Em construção...
+A arquitetura da solução se baseou em uma estrutura MVC, onde o form se comunica com uma classe de negócio e a classe de negócio se comunica com a classe da base de dados.
+
+Para auxiliar na solução, foram desenvolvidos dois componentes proprietários, disponibilizados na pasta de componentes e detalhados a seguir:
+
+### ucpComboBoxValue
+O componente ucpComboBoxValue foi criado a partir de uma TComboBox para permitir a utilização de uma combo que liste o nome dos estados e permite retornar a sigla do mesmo. 
+A propriedade publicada possui o nome valores e pode ser atribuída assim como os items de uma combobox normal.
+Para extrair o valor selecionado foi criado o método ValorSelecionado onde é retornado o valor através do item index, realizando tratamentos para não apresentar falhas.
+
+### ucpConsultaViaCep
+Este é o componente principal do projeto, responsável pela comunicação com a viacep.
+Foram criadas propriedades expostas para definição da forma de consulta, se XML ou JSON, assim como também foi publicada a url caso seja necessário futuramente ajustar por uma mudança de hospedagem do site, sem necessidade de se recompilar o componente.
+O componente disponibiliza os métodos de consulta por CEP e consulta por endereço completo, onde é retornado um Record (ou array) com todos os atributos da consulta, sendo o componente responsável pela deserialização do JSON ou XML.
+
+### Base de dados
+Para desenvolvimento da solução, foi escolhida a base SQLlite, que se mostra razoável para um MVP onde será acessado apenas localmente através do desktop, sem necessidade de múltiplos acessos.
+Sendo assim, foram utilizados componentes do FireDac para criação e alteração dos registros em base.
+
+### Negócio
+A classe de negócio apresenta todas as regras necessárias para o funcionamento da aplicação, realizando a comunicação entre o frontend e a base de dados.
+Nesta classe, foi criado uma espécie de observer, mas como não eram necessário multiplos notificados, optei por alocar o observer como um proprietário da classe, permitindo a geração de mensagens em tela através da classe de negócio. Para isto foi utilizada uma interface da qual o frame principal é herdado.
+Ainda na classe de negócio, se utilizou a orientação a objetos e clean code, priorizando a leitura simples do código, a singularidade de cada função e não duplicação de código.  
+
 
 ## Como executar
-Em construção...
+1. Faça o download do projeto para seu computador
+2. Abra a pasta Prova_Delphi_ViaCep\Win32\Release
+3. Execute o arquivo ConsultaCep.exe
+4. Irá abrir a seguinte tela:
+
+<div align="center">
+<img width="786" height="393" alt="image" src="https://github.com/user-attachments/assets/5214442c-746b-4c7e-8c5a-4174f4597034" />
+</div>
+
+5. Selecione a aba conforme a sua opção de busca
+6. Informe os campos disponíveis em tela e clique em "Buscar"
+7. Os registros encontrados serão listados em tela.
+8. O botão limpar apaga todos os campos em tela e disponibiliza a consulta de todos endereços da base.
+
 
 
 
